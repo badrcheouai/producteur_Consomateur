@@ -7,7 +7,7 @@ public class Factory {
         for (int i = 0; i < 3; i++) { // Trois producteurs
             new Thread(new Producer(mailBox)).start();
         }
-        for (int i = 0; i < 2; i++) { // Deux consommateurs
+        for (int i = 0; i < 3; i++) { // Deux consommateurs
             new Thread(new Consumer(mailBox)).start();
         }
     }
